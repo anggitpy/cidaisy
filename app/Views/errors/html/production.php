@@ -1,25 +1,32 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
 
-    <title><?= lang('Errors.whoops') ?></title>
+        <title>
+            <?= lang('Errors.whoops') ?>
+        </title>
 
-    <style>
-        <?= preg_replace('#[\r\n\t ]+#', ' ', file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.css')) ?>
-    </style>
-</head>
-<body>
+        <style>
+            <?= preg_replace('#[\r\n\t ]+#', ' ', file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.css')) ?>
 
-    <div class="container text-center">
+        </style>
+    </head>
+    <body>
 
-        <h1 class="headline"><?= lang('Errors.whoops') ?></h1>
+        <div class="container text-center">
 
-        <p class="lead"><?= lang('Errors.weHitASnag') ?></p>
+            <h1 class="headline">
+                <?= lang('Errors.whoops') ?>
+            </h1>
 
-    </div>
+            <p class="lead">
+                <?= lang('Errors.weHitASnag') ?>
+            </p>
 
-</body>
+        </div>
+
+    </body>
 
 </html>

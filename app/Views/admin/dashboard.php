@@ -6,14 +6,64 @@
  * @var int $activeUsers
  */
 ?>
+
 <?= $this->extend('layouts/admin') ?>
 <?= $this->section('content') ?>
-<section class="card border border-base-300 bg-base-100"><div class="card-body md:flex-row md:items-center md:justify-between"><div><span class="badge badge-primary badge-outline mb-4">WORKSPACE OVERVIEW</span><h2 class="text-2xl font-semibold">Welcome back, <?= esc(auth()->user()->username) ?>.</h2><p class="mt-2 text-base-content/60">A clear starting point for everything you build next.</p></div><a class="btn btn-primary mt-4 md:mt-0" href="<?= site_url('admin/profile') ?>">My profile →</a></div></section>
+<section class="card border border-base-300 bg-base-100">
+    <div class="card-body md:flex-row md:items-center md:justify-between">
+        <div>
+            <span class="badge badge-primary badge-outline mb-4">WORKSPACE OVERVIEW</span>
+            <h2 class="text-2xl font-semibold">Welcome back, <?= esc(auth()->user()->username) ?>.</h2>
+            <p class="mt-2 text-base-content/60">A clear starting point for everything you build next.</p>
+        </div>
+        <a class="btn btn-primary mt-4 md:mt-0" href="<?= site_url('admin/profile') ?>">My profile →</a>
+    </div>
+</section>
 <div class="grid gap-5 sm:grid-cols-3">
+
     <?php foreach ([['Total users', $totalUsers, 'Accounts in your workspace'], ['Active users', $activeUsers, 'Enabled accounts'], ['Your groups', count(auth()->user()->getGroups()), implode(', ', auth()->user()->getGroups())]] as [$label, $value, $description]): ?>
-    <div class="stat rounded-box border border-base-300 bg-base-100"><div class="stat-title"><?= esc($label) ?></div><div class="stat-value my-2 text-primary"><?= esc($value) ?></div><div class="stat-desc whitespace-normal"><?= esc($description) ?></div></div>
+
+        <div class="stat rounded-box border border-base-300 bg-base-100">
+            <div class="stat-title">
+                <?= esc($label) ?>
+            </div>
+            <div class="stat-value my-2 text-primary">
+                <?= esc($value) ?>
+            </div>
+            <div class="stat-desc whitespace-normal">
+                <?= esc($description) ?>
+            </div>
+        </div>
+
     <?php endforeach ?>
+
 </div>
-<div class="grid gap-5 md:grid-cols-2"><section class="card border border-base-300 bg-base-100"><div class="card-body"><h2 class="card-title">Make it your own</h2><p class="text-sm text-base-content/60">Your next business module belongs here. Reuse the layout, add a permission, and build a focused page.</p><div class="mt-5 flex flex-wrap gap-2"><span class="badge badge-soft badge-primary">Server rendered</span><span class="badge badge-soft badge-success">Shield authentication</span><span class="badge badge-soft">Ready to extend</span></div></div></section>
-<section class="card border border-base-300 bg-base-100"><div class="card-body"><h2 class="card-title">Reusable components</h2><p class="text-sm text-base-content/60">Consistent building blocks for future pages.</p><div class="alert alert-info mt-3"><span>Your foundation is ready. Build one module at a time.</span></div><div class="card-actions mt-3"><button type="button" class="btn btn-primary btn-sm">Primary</button><button type="button" class="btn btn-outline btn-sm">Secondary</button><span class="badge badge-success self-center">Available</span></div></div></section></div>
+<div class="grid gap-5 md:grid-cols-2">
+    <section class="card border border-base-300 bg-base-100">
+        <div class="card-body">
+            <h2 class="card-title">Make it your own</h2>
+            <p class="text-sm text-base-content/60">Your next business module belongs here. Reuse the layout, add a
+                permission, and build a focused page.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+                <span class="badge badge-soft badge-primary">Server rendered</span>
+                <span class="badge badge-soft badge-success">Shield authentication</span>
+                <span class="badge badge-soft">Ready to extend</span>
+            </div>
+        </div>
+    </section>
+    <section class="card border border-base-300 bg-base-100">
+        <div class="card-body">
+            <h2 class="card-title">Reusable components</h2>
+            <p class="text-sm text-base-content/60">Consistent building blocks for future pages.</p>
+            <div class="alert alert-info mt-3">
+                <span>Your foundation is ready. Build one module at a time.</span>
+            </div>
+            <div class="card-actions mt-3">
+                <button type="button" class="btn btn-primary btn-sm">Primary</button>
+                <button type="button" class="btn btn-outline btn-sm">Secondary</button>
+                <span class="badge badge-success self-center">Available</span>
+            </div>
+        </div>
+    </section>
+</div>
 <?= $this->endSection() ?>
