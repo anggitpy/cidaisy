@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ * @var string|null $title Optional page title.
+ */
+?>
 <!doctype html>
 <html lang="en">
 <head>

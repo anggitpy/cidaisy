@@ -1,3 +1,9 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ */
+?>
 <?= $this->extend('layouts/auth') ?>
 <?= $this->section('title') ?>Sign in<?= $this->endSection() ?>
 <?= $this->section('main') ?>

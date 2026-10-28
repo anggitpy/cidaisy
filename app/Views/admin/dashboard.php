@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ * @var int $totalUsers
+ * @var int $activeUsers
+ */
+?>
 <?= $this->extend('layouts/admin') ?>
 <?= $this->section('content') ?>
 <section class="card border border-base-300 bg-base-100"><div class="card-body md:flex-row md:items-center md:justify-between"><div><span class="badge badge-primary badge-outline mb-4">WORKSPACE OVERVIEW</span><h2 class="text-2xl font-semibold">Welcome back, <?= esc(auth()->user()->username) ?>.</h2><p class="mt-2 text-base-content/60">A clear starting point for everything you build next.</p></div><a class="btn btn-primary mt-4 md:mt-0" href="<?= site_url('admin/profile') ?>">My profile →</a></div></section>

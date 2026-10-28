@@ -2,6 +2,11 @@
 
 use CodeIgniter\CLI\CLI;
 
+/**
+ * @var \Throwable $exception
+ * @var string $message
+ */
+
 // The main Exception
 CLI::write('[' . $exception::class . ']', 'light_gray', 'red');
 CLI::write($message);

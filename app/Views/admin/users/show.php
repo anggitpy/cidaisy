@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ * @var \CodeIgniter\Shield\Entities\User $user
+ */
+?>
 <?= $this->extend('layouts/admin') ?>
 <?= $this->section('content') ?>
 <section class="card max-w-3xl border border-base-300 bg-base-100"><div class="card-body">

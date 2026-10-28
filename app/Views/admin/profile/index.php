@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ * @var \CodeIgniter\Shield\Entities\User $user
+ */
+?>
 <?= $this->extend('layouts/admin') ?>
 <?= $this->section('content') ?>
 <?php if ($user->requiresPasswordReset() || session()->getTempdata('magicLogin')): ?><div class="alert alert-warning" role="alert">Choose a new password below to finish securing your account.</div><?php endif ?>

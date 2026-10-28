@@ -1,3 +1,12 @@
+<?php
+
+/**
+ * @var \CodeIgniter\View\View $this
+ * @var \CodeIgniter\Shield\Entities\User[] $users
+ * @var \CodeIgniter\Pager\Pager $pager
+ * @var string $search
+ */
+?>
 <?= $this->extend('layouts/admin') ?>
 <?= $this->section('actions') ?><?php if (auth()->user()->can('users.create')): ?><a class="btn btn-primary" href="<?= site_url('admin/users/new') ?>">+ Create user</a><?php endif ?><?= $this->endSection() ?>
 <?= $this->section('content') ?>

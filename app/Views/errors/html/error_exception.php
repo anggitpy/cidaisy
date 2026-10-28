@@ -2,6 +2,14 @@
 use CodeIgniter\HTTP\Header;
 use CodeIgniter\CodeIgniter;
 
+/**
+ * @var string $title
+ * @var \Throwable $exception
+ * @var string $file
+ * @var int $line
+ * @var list<array<string, mixed>> $trace
+ */
+
 $errorId = uniqid('error', true);
 ?>
 <!doctype html>
