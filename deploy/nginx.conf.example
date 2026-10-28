@@ -1,0 +1,22 @@
+# Replace paths, hostname, and PHP upstream for your environment.
+# Laragon on Windows may use a different PHP FastCGI port.
+server {
+    listen 80;
+    server_name cidaisy.test;
+    root /absolute/path/to/cidaisy/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    # Only the front controller is executable; uploaded files must never run as PHP.
+    location = /index.php {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root/index.php;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+
+    location ~ \.php$ { return 404; }
+    location ~ /\. { deny all; }
+}

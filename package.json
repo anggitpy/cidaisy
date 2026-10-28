@@ -1,0 +1,17 @@
+{
+  "name": "cidaisy",
+  "version": "1.0.0",
+  "description": "Reusable CodeIgniter 4 admin boilerplate with Shield, Settings, and daisyUI",
+  "scripts": {
+    "dev": "tailwindcss -i ./resources/css/app.css -o ./public/assets/app.css --watch",
+    "build": "tailwindcss -i ./resources/css/app.css -o ./public/assets/app.css --minify"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.7.50",
+    "tailwindcss": "^4.3.3"
+  },
+  "private": true
+}
